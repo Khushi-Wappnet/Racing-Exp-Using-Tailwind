@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Keeps video fixed in the background */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans bg-black text-white">
+
+    <!-- 🌟 Responsive Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-80 text-white py-4 px-6 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold">🏎️ Racing World</h1>
+
+            <!-- Hamburger Menu (Mobile) -->
+            <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
+                ☰
+            </button>
+
+            <!-- Navbar Links (Hidden in mobile, shown in desktop) -->
+            <ul id="menu" class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-red-500">Home</a></li>
+                <li><a href="#history" class="hover:text-red-500">History</a></li>
+                <li><a href="#cars" class="hover:text-red-500">Cars</a></li>
+                <li><a href="#tracks" class="hover:text-red-500">Tracks</a></li>
+                <li><a href="#tips" class="hover:text-red-500">Pro Tips</a></li>
+                <li><a href="#join" class="hover:text-red-500">Join</a></li>
+            </ul>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center space-y-4 py-4 bg-black bg-opacity-80">
+            <a href="#home" class="text-white hover:text-red-500">Home</a>
+            <a href="#history" class="text-white hover:text-red-500">History</a>
+            <a href="#cars" class="text-white hover:text-red-500">Cars</a>
+            <a href="#tracks" class="text-white hover:text-red-500">Tracks</a>
+            <a href="#tips" class="text-white hover:text-red-500">Pro Tips</a>
+            <a href="#join" class="text-white hover:text-red-500">Join</a>
+        </div>
+    </nav>
+
+    <!-- Background Video (Fixed) -->
+    <video autoplay loop muted playsinline class="video-bg">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Scrollable Content -->
+    <div class="relative z-10 min-h-screen pt-24 px-4 md:px-10 bg-black bg-opacity-50">
+
+        <!-- 🚗 Home Section -->
+        <section id="home" class="text-center">
+            <h1 class="text-5xl font-bold uppercase">Feel the Speed</h1>
+            <p class="text-lg mt-4">Experience the thrill of high-speed racing like never before!</p>
+            <a href="#explore" class="mt-6 inline-block px-6 py-3 bg-red-600 text-white rounded-full font-bold transition duration-300 hover:bg-red-800">
+                Start Racing
+            </a>
+        </section>
+
+        <!-- 🏁 Racing History -->
+        <section id="history" class="mt-20 text-center">
+            <h2 class="text-3xl font-bold">🏁 The History of Racing</h2>
+            <p class="text-lg mt-4 max-w-2xl mx-auto">
+                Racing has been a part of human culture since the invention of the wheel. From ancient chariot races to modern Formula 1, the thrill of speed has always captivated audiences worldwide.
+            </p>
+        </section>
+
+        <!-- 🚗 Top 3 Fastest Racing Cars -->
+        <section id="cars" class="mt-20">
+            <h2 class="text-3xl font-bold text-center">🚗 Top 3 Fastest Racing Cars</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 max-w-4xl mx-auto">
+                <div class="bg-gray-800 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-semibold">🏎️ Bugatti Chiron Super Sport</h3>
+                    <p class="mt-2">Top Speed: 304 mph</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-semibold">🚀 SSC Tuatara</h3>
+                    <p class="mt-2">Top Speed: 282 mph</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-semibold">🔥 Koenigsegg Jesko</h3>
+                    <p class="mt-2">Top Speed: 278 mph</p>
+                </div>
+            </div>
+        </section>
+        <!-- 🔥 Pro Racing Tips -->
+        <section id="tips" class="mt-20">
+          <h2 class="text-3xl font-bold text-center">🔥 Pro Racing Tips</h2>
+          <ul class="mt-4 max-w-2xl mx-auto text-lg">
+              <li>✔️ Always take the racing line for better speed</li>
+              <li>✔️ Perfect your braking points to gain time</li>
+              <li>✔️ Master cornering techniques to stay ahead</li>
+              <li>✔️ Use aerodynamics to your advantage</li>
+              <li>✔️ Stay calm under pressure to make precise moves</li>
+          </ul>
+      </section>
+
+        <!-- 🏆 Join Section -->
+        <section id="join" class="mt-20 text-center">
+            <h2 class="text-3xl font-bold">🏆 Join the Racing Community</h2>
+            <p class="text-lg mt-4 max-w-2xl mx-auto">
+                Love racing? Join thousands of enthusiasts worldwide and start your journey today!
+            </p>
+            <a href="#join" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-full font-bold transition duration-300 hover:bg-blue-800">
+                Join Now
+            </a>
+        </section>
+
+    </div>
+
+    <!-- JavaScript for Navbar Toggle -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
